@@ -1,0 +1,18 @@
+.grid {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 40px;
+  justify-content: center;
+}
+.grid:hover {
+  opacity: 0.8;
+}
+.link {
+  color: rgb(41, 39, 39);
+  text-decoration: none;
+  margin: 10px;
+}
+.link:hover {
+  color: rgb(224, 224, 224);
+}
