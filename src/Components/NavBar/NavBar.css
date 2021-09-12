@@ -17,3 +17,12 @@
 .searchButton {
   border-radius: 8px;
 }
+.navbar-item {
+  margin-right: 2rem;
+  color: #46515c;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+.navbar-item:hover {
+  color: rgb(255, 255, 255) !important;
+}

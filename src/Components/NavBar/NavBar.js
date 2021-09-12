@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.css";
-import { Navbar, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Form, FormControl, Button, Nav } from "react-bootstrap";
 import SearchIcon from "@material-ui/icons/Search";
-import { useHistory } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import { useQuery } from "../Hook/useQuery";
 
 const NavBar = () => {
@@ -25,6 +25,17 @@ const NavBar = () => {
           <h1>MOVIES</h1>
         </nav>
       </div>
+      <Nav className="mr-auto">
+        <NavLink
+          exact
+          to={"/"}
+          activeClassName="claseActiva"
+          className="navbar-item"
+        >
+          Inicio
+        </NavLink>
+      </Nav>
+      <Nav className="mr-auto"></Nav>
       <div className="searchBox">
         <Navbar>
           <Navbar.Collapse id="navbarScroll">
