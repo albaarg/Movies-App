@@ -6,3 +6,14 @@
   padding-left: 30px;
   height: 75px;
 }
+.searchContainer {
+  display: flex;
+  justify-content: right;
+}
+.searchForm {
+  position: relative;
+  border-radius: 6px;
+}
+.searchButton {
+  border-radius: 8px;
+}

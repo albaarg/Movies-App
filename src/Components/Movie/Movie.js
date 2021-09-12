@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Movie.css";
-import movie from "../Page/movie.json";
+//import movie from "../Page/movie.json";
 import { get } from "../Api/Getmovie.js";
 import { useParams } from "react-router-dom";
-
 //Movie details
 export const Movie = () => {
   const { movieId } = useParams();
