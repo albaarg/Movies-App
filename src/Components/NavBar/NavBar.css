@@ -3,21 +3,11 @@
   color: rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);
   justify-content: space-between;
-  padding-left: 30px;
+  padding-top: 20px;
   height: 75px;
 }
-.searchContainer {
-  display: flex;
-  justify-content: right;
-}
-.searchForm {
-  position: relative;
-  border-radius: 6px;
-}
-.searchButton {
-  border-radius: 8px;
-}
 .navbar-item {
+  padding: 30px;
   margin-right: 2rem;
   color: #46515c;
   font-size: 1.8rem;
@@ -25,4 +15,20 @@
 }
 .navbar-item:hover {
   color: rgb(255, 255, 255) !important;
+}
+.searchContainer {
+  display: flex;
+  justify-content: right;
+}
+.searchForm {
+  background-color: rgb(73, 70, 70);
+  font-size: 1rem;
+  height: 25px;
+  border-radius: 8px;
+  padding: 0.5rem;
+  border: 2px solid rgb(73, 70, 70);
+  font-family: inherit;
+}
+.searchBox {
+  position: relative;
 }

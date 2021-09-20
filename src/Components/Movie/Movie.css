@@ -1,0 +1,14 @@
+.col {
+  border-radius: 15px;
+  max-width: 400px;
+  margin: 1px;
+  justify-content: center;
+  padding: 8px;
+}
+
+.detailContainer {
+  justify-content: center;
+  color: grey;
+  padding: 20px;
+  flex-wrap: wrap;
+}

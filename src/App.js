@@ -4,6 +4,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import { Movie } from "./Components/Movie/Movie";
 import { Home } from "./Components/Home/Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Footer } from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/Movie ">
             <Movie />
           </Route>
+
           <Route exact path="/movies/:movieId">
             <Movie />
           </Route>
@@ -22,6 +24,7 @@ function App() {
           </Route>
         </Switch>
       </header>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import "./Home.css";
 import { MovieCard } from "../MovieCard/MovieCard.js";
 import { get } from "../Api/Getmovie.js";
-import "./Home.css";
 import { useQuery } from "../Hook/useQuery";
-import Spinner from "react-bootstrap/Spinner";
+import { Loader } from "../Loader/Loader";
+import { Empty } from "../Empty/Empty";
 
 //All movies
 export const Home = () => {
@@ -28,13 +29,15 @@ export const Home = () => {
       });
   }, [search]);
 
-  return loading ? (
-    <Spinner animation="border" variant="white" />
-  ) : (
+  if (!loading && movies.length === 0) {
+    return <Empty />;
+  }
+  return (
     <div className="grid">
       {movies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
+      <Loader />
     </div>
   );
 };

@@ -1,60 +1,45 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./NavBar.css";
-import { Navbar, Form, FormControl, Button, Nav } from "react-bootstrap";
-import SearchIcon from "@material-ui/icons/Search";
+import { Nav } from "react-bootstrap";
 import { useHistory, NavLink } from "react-router-dom";
 import { useQuery } from "../Hook/useQuery";
 
 const NavBar = () => {
   const query = useQuery();
   const search = query.get("search");
-  const [searchMovie, setSearchMovie] = useState("");
   const history = useHistory();
-  useEffect(() => {
-    setSearchMovie(search || "");
-  }, [search]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push("/?search=" + searchMovie);
   };
   return (
     <>
       <div className="container">
         <nav className="topnav">
-          <h1>MOVIES</h1>
+          <h1>MOVIES APP</h1>
         </nav>
       </div>
       <Nav className="mr-auto">
-        <NavLink
-          exact
-          to={"/"}
-          activeClassName="claseActiva"
-          className="navbar-item"
-        >
-          Inicio
+        <NavLink exact to={"/"} className="navbar-item">
+          Home
         </NavLink>
+        ))
       </Nav>
-      <Nav className="mr-auto"></Nav>
-      <div className="searchBox">
-        <Navbar>
-          <Navbar.Collapse id="navbarScroll">
-            <Form className="searchContainer" onSubmit={handleSubmit}>
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="searchForm"
-                aria-label="Search"
-                value={searchMovie}
-                onChange={(e) => setSearchMovie(e.target.value)}
-              />
-              <Button className="searchButton" variant="outline-success">
-                <SearchIcon size={8} />
-              </Button>
-            </Form>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+      <form className="searchContainer" onSubmit={handleSubmit}>
+        <div className="searchbox">
+          <input
+            className="searchForm"
+            type="search"
+            placeholder="Search..."
+            aria-label="Search"
+            value={search}
+            onChange={(e) => {
+              const value = e.target.value;
+              history.push("/?search=" + value);
+            }}
+          />
+        </div>
+      </form>
     </>
   );
 };
