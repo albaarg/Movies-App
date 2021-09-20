@@ -1,6 +1,8 @@
 MOVIES APP is a APP that use TMDB API. A service restfull and open source of movies and series.
 
 With the APP we can:
+
+
 ◉  Find the latest movies
 
 ◉  Search Movies
